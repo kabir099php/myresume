@@ -1,0 +1,17 @@
+{
+  "name": "kabir-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Freelance full-stack developer portfolio for Kabir Patel. React (Vite) frontend served by a single Node/Express server.",
+  "scripts": {
+    "install:all": "npm install && npm --prefix client install && npm --prefix server install",
+    "build": "npm --prefix client install && npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "postinstall": "npm --prefix client install && npm --prefix server install"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
