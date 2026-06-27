@@ -11,6 +11,9 @@
     "dev:server": "npm --prefix server run dev",
     "postinstall": "npm --prefix client install && npm --prefix server install"
   },
+  "dependencies": {
+    "nodemailer": "^6.9.16"
+  },
   "engines": {
     "node": ">=20"
   }
