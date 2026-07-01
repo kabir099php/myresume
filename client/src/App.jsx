@@ -6,7 +6,6 @@ import {
   services,
   skillGroups,
   projects,
-  experience,
   education,
   languages,
 } from "./data/portfolio.js";
@@ -40,7 +39,6 @@ const NAV = [
   ["Services", "services"],
   ["Skills", "skills"],
   ["Work", "work"],
-  ["Experience", "experience"],
   ["Contact", "contact"],
 ];
 
@@ -135,7 +133,7 @@ function Hero() {
               <span className="k">const</span> <span className="f">kabir</span> = {"{"}
             </div>
             <div className="code-line">  role: <span className="s">"Full Stack Team Lead"</span>,</div>
-            <div className="code-line">  experience: <span className="n">7</span>,</div>
+            <div className="code-line">  experience: <span className="n">8</span>,</div>
             <div className="code-line">  stack: [<span className="s">"Node.js"</span>, <span className="s">"React"</span>, <span className="s">"Next.js"</span>],</div>
             <div className="code-line">  backend: [<span className="s">"NestJS"</span>, <span className="s">"Express"</span>, <span className="s">"GraphQL"</span>],</div>
             <div className="code-line">  cloud: [<span className="s">"AWS"</span>, <span className="s">"Docker"</span>, <span className="s">"CI/CD"</span>],</div>
@@ -298,35 +296,6 @@ function Work() {
   );
 }
 
-function Experience() {
-  return (
-    <section id="experience" className="section">
-      <div className="container">
-        <Reveal>
-          <span className="eyebrow">Career</span>
-          <h2 className="section-title">Professional experience</h2>
-        </Reveal>
-        <div className="timeline" style={{ marginTop: 44 }}>
-          {experience.map((e) => (
-            <Reveal key={e.company} className="tl-item">
-              <span className="tl-dot" />
-              <div className="tl-head">
-                <span className="tl-role">{e.role}</span>
-                <span className="tl-company">@ {e.company}</span>
-                <span className="tl-period">{e.period} · {e.duration}</span>
-              </div>
-              <ul className="tl-points">
-                {e.points.map((pt, i) => (
-                  <li key={i}>{pt}</li>
-                ))}
-              </ul>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -444,7 +413,6 @@ export default function App() {
       <Services />
       <Skills />
       <Work />
-      <Experience />
       <Contact />
       <Footer />
     </>

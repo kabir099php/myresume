@@ -19,11 +19,11 @@ export const profile = {
     { label: "Email", url: "mailto:kabirphp099@gmail.com", icon: "mail" },
   ],
   summary:
-    "Strategic Full Stack Developer and Team Lead with 7+ years of experience architecting scalable web and SaaS applications. I lead cross-functional Agile teams (up to 9 members) to deliver robust platforms for global clients — modernizing legacy systems, building high-performance microservices, and integrating AI-driven features that automate workflows and elevate user experience with Node.js, React, and cloud infrastructure.",
+    "Strategic Full Stack Developer and Team Lead with 8+ years of experience architecting scalable web and SaaS applications. I lead cross-functional Agile teams (up to 9 members) to deliver robust platforms for global clients — modernizing legacy systems, building high-performance microservices, and integrating AI-driven features that automate workflows and elevate user experience with Node.js, React, and cloud infrastructure.",
 };
 
 export const stats = [
-  { value: "7+", label: "Years Experience" },
+  { value: "8+", label: "Years Experience" },
   { value: "20+", label: "Projects Delivered" },
   { value: "12", label: "Countries Served" },
   { value: "9", label: "Team Members Led" },
@@ -165,7 +165,7 @@ export const experience = [
 
 export const education = {
   degree: "Bachelor's Degree in Computer Engineering",
-  year: "2017",
+  year: "2018",
 };
 
 export const languages = ["English", "Hindi", "Gujarati"];
