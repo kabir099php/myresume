@@ -24,6 +24,8 @@ const paths = {
     "M5 12h14m0 0-6-6m6 6-6 6",
   menu: "M3 6h18M3 12h18M3 18h18",
   close: "M6 6l12 12M18 6 6 18",
+  external:
+    "M14 3h7v7m0-7L10 14M19 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h5",
 };
 
 const filled = ["github", "linkedin", "mail"];

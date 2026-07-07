@@ -284,6 +284,12 @@ ul { list-style: none; }
   color: #b9a8ff;
 }
 .star { color: #febc2e; flex-shrink: 0; }
+.project-link {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 16px;
+  font-size: 0.85rem; font-weight: 600; color: var(--accent-2);
+  text-decoration: none; transition: gap 0.2s ease, opacity 0.2s ease;
+}
+.project-link:hover { gap: 9px; opacity: 0.85; }
 
 /* ---------- Experience timeline ---------- */
 .timeline { position: relative; padding-left: 34px; }

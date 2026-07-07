@@ -288,6 +288,11 @@ function Work() {
                   <span key={t} className="tag">{t}</span>
                 ))}
               </div>
+              {p.link && (
+                <a className="project-link" href={p.link} target="_blank" rel="noopener noreferrer">
+                  Visit site <Icon name="external" size={16} />
+                </a>
+              )}
             </Reveal>
           ))}
         </div>

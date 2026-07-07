@@ -81,59 +81,82 @@ export const skillGroups = [
 
 export const projects = [
   {
-    name: "Wilson and Roe — Legal Software Modernization",
-    role: "Full Stack Team Lead",
+    name: "EL — Monolith to Microservices Modernization",
+    role: "Solution Architect & Backend Lead",
     summary:
-      "Spearheaded the enterprise modernization of a legacy legal system: a high-performance React frontend and scalable Node.js backend services. Integrated the Microsoft Graph API to automate email and document workflows, and engineered an AI-powered pipeline using Claude/Gemini for legal document summarization and email classification.",
-    tags: ["React", "Node.js", "Microsoft Graph API", "Claude", "Gemini", "AI Automation"],
+      "Led the architecture and backend for converting a monolith to a microservices-based system in NestJS. Migrated from MSSQL to PostgreSQL with Change Data Capture (CDC) and Kafka integration, planning a data migration of 800+ GB.",
+    tags: ["NestJS", "Microservices", "PostgreSQL", "Kafka", "CDC", "MSSQL"],
     highlight: true,
   },
   {
-    name: "Link My Life — Secure Digital Asset Manager",
+    name: "TicketBy — Event Ticketing Platform",
     role: "Full Stack Developer",
     summary:
-      "Built secure modules for encrypted password management and legacy document storage in React. Collaborated with blockchain and DevOps engineers to guarantee platform security and reliability.",
-    tags: ["React", "Encryption", "Blockchain", "Security"],
-    highlight: false,
-  },
-  {
-    name: "ArtGapi — Global Art Marketplace",
-    role: "Architect & Lead Developer",
-    summary:
-      "Architected a 12-country marketplace with Node.js and MySQL. Implemented Stripe global payments and built a live Masterclass streaming feature with interactive real-time chat.",
-    tags: ["Node.js", "MySQL", "Stripe", "Live Streaming", "WebSockets"],
+      "A ticket-selling website for booking multiple kinds of events, built with a modern UI and a NestJS backend tech stack.",
+    tags: ["NestJS", "React", "Ticketing", "Events"],
+    link: "https://app.ticketby.com.sa/en",
     highlight: true,
   },
   {
-    name: "Syool Platform — v2 Architecture",
-    role: "System Architect",
+    name: "Rating — Employee Rating & Management Software",
+    role: "Founding Developer & Lead",
     summary:
-      "Directed end-to-end architecture of the Syool platform: multi-tenant administration, complex role-based access control (RBAC), and real-time analytics dashboards powered by TradingView APIs. Designed a highly available Node.js backend and a modular React frontend.",
-    tags: ["Node.js", "React", "RBAC", "Multi-tenant", "TradingView API", "Analytics"],
-    highlight: false,
-  },
-  {
-    name: "DreamDesign — VR Design Platform",
-    role: "Lead Engineer",
-    summary:
-      "Engineered the web infrastructure for a Virtual Reality design platform. Built a scalable Node.js backend for heavy 3D asset processing and a dynamic React dashboard with in-browser 3D (.glb) previews and automated rendering pipelines.",
-    tags: ["Node.js", "React", "3D / WebGL", "Rendering Pipelines"],
+      "A data-analysis platform of 3 apps plus a CMS used to rate and manage employees, deployed across Subway and Costa Coffee in several countries. Included versioned APIs and extensive database management tooling. Started from scratch in Laravel + React, then migrated to NestJS and PostgreSQL.",
+    tags: ["Laravel", "React", "NestJS", "PostgreSQL", "Data Analysis", "CMS"],
+    link: "https://www.servefirst.co.uk/",
     highlight: true,
   },
   {
-    name: "Event Management Platform",
-    role: "Team Lead (20 members)",
-    summary:
-      "Led a 20-member team to build a dedicated event platform with Laravel. Developed APIs, dynamic form builders, and real-time discussion panels via WebSockets.",
-    tags: ["Laravel", "WebSockets", "APIs", "Team Leadership"],
-    highlight: false,
-  },
-  {
-    name: "Trackmysite — SEO System",
+    name: "1mg — Pharma E-Commerce Platform",
     role: "Full Stack Developer",
     summary:
-      "Built a comprehensive SEO tool with Angular and Laravel. Integrated third-party APIs for Google keyword tracking and automated weekly client reports with analytical graphs.",
-    tags: ["Angular", "Laravel", "SEO", "Data Visualization"],
+      "A platform for all pharma needs with algorithm- and composition-based medicine suggestions powered by Elasticsearch. Delivered app APIs plus an e-commerce website with inventory management, built with Node.js APIs and a React frontend.",
+    tags: ["Node.js", "React", "Elasticsearch", "E-Commerce", "Inventory"],
+    link: "https://medgreenhealthcare.in/",
+    highlight: false,
+  },
+  {
+    name: "Ecom — E-Commerce Platform",
+    role: "Full Stack Developer",
+    summary:
+      "An e-commerce platform built on NestJS, used to sell all kinds of e-commerce products.",
+    tags: ["NestJS", "E-Commerce"],
+    highlight: false,
+  },
+  {
+    name: "RedGoods — Multi-Vendor Marketplace",
+    role: "Full Stack Developer",
+    summary:
+      "A Canada-only e-commerce platform with Laravel APIs and a React frontend, supporting a subscription model, personal lists, and the ability for a user to become a vendor rather than only a consumer.",
+    tags: ["Laravel", "React", "Subscriptions", "Multi-Vendor", "E-Commerce"],
+    link: "https://pocketwings.ca/",
+    highlight: false,
+  },
+  {
+    name: "PLP — Private Label Portal",
+    role: "Full Stack Developer",
+    summary:
+      "An e-commerce website with a wide product range and extensive product management, built with Node.js and React.",
+    tags: ["Node.js", "React", "E-Commerce", "Product Management"],
+    link: "https://private-label-portal.com/",
+    highlight: false,
+  },
+  {
+    name: "Netco — Fintech Service Portal",
+    role: "Full Stack Developer",
+    summary:
+      "A fintech service-management portal offering all kinds of services a consumer can order, with vendor registration to offer services. Backend in Laravel and frontend in React.",
+    tags: ["Laravel", "React", "Fintech", "Marketplace"],
+    link: "https://netcopos.com/",
+    highlight: false,
+  },
+  {
+    name: "Clinical Wallet — E-Doctor Consultation",
+    role: "Full Stack Developer",
+    summary:
+      "An e-doctor consultation portal where doctors register and provide services and users book them, with an integrated payment gateway. Built with Laravel APIs and a React frontend.",
+    tags: ["Laravel", "React", "Payments", "Healthcare"],
+    link: "https://thetrainingnotebook.com/",
     highlight: false,
   },
 ];
