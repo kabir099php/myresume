@@ -112,15 +112,16 @@ export const projects = [
     summary:
       "A platform for all pharma needs with algorithm- and composition-based medicine suggestions powered by Elasticsearch. Delivered app APIs plus an e-commerce website with inventory management, built with Node.js APIs and a React frontend.",
     tags: ["Node.js", "React", "Elasticsearch", "E-Commerce", "Inventory"],
-    link: "https://medgreenhealthcare.in/",
+    link: "https://www.1mg.com/",
     highlight: false,
   },
   {
-    name: "Ecom — E-Commerce Platform",
+    name: "Training Notebook",
     role: "Full Stack Developer",
     summary:
-      "An e-commerce platform built on NestJS, used to sell all kinds of e-commerce products.",
+      "The Training Notebook is a minimalist mobile and web app designed specifically for personal trainers. Created as a streamlined alternative to bloated coaching software and traditional paper logs, it focuses strictly on core workflows—such as client rostering, workout program building, tracking previous sessions, and logging progress—without unnecessary complexity or feature bloat.",
     tags: ["NestJS", "E-Commerce"],
+    link :"https://thetrainingnotebook.com/",
     highlight: false,
   },
   {
@@ -129,7 +130,7 @@ export const projects = [
     summary:
       "A Canada-only e-commerce platform with Laravel APIs and a React frontend, supporting a subscription model, personal lists, and the ability for a user to become a vendor rather than only a consumer.",
     tags: ["Laravel", "React", "Subscriptions", "Multi-Vendor", "E-Commerce"],
-    link: "https://pocketwings.ca/",
+    link: "https://goodlifeconsumer.com/",
     highlight: false,
   },
   {
@@ -156,7 +157,7 @@ export const projects = [
     summary:
       "An e-doctor consultation portal where doctors register and provide services and users book them, with an integrated payment gateway. Built with Laravel APIs and a React frontend.",
     tags: ["Laravel", "React", "Payments", "Healthcare"],
-    link: "https://thetrainingnotebook.com/",
+    link: "https://clinicalwallet.com/",
     highlight: false,
   },
 ];
