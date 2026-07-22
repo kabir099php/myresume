@@ -303,32 +303,6 @@ function Work() {
 
 
 function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [status, setStatus] = useState(null); // null | 'sending' | 'ok' | 'err'
-
-  const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-
-  const submit = async (e) => {
-    e.preventDefault();
-    setStatus("sending");
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      if (!res.ok) throw new Error("Request failed");
-      // The API returns delivered:false when SMTP isn't configured — the
-      // message was accepted but no mail was actually sent. Don't claim
-      // otherwise, or the sender assumes they've reached me.
-      const data = await res.json().catch(() => ({}));
-      setStatus(data.delivered === false ? "undelivered" : "ok");
-      setForm({ name: "", email: "", message: "" });
-    } catch {
-      setStatus("err");
-    }
-  };
-
   return (
     <section id="contact" className="section">
       <div className="container">
@@ -339,8 +313,8 @@ function Contact() {
         <div className="contact-wrap" style={{ marginTop: 36 }}>
           <Reveal className="contact-info">
             <p>
-              Have a project in mind or need a technical lead? Send a message and
-              I'll get back to you within 24 hours.
+              Have a project in mind or need a technical lead? Email me and I'll
+              get back to you within 24 hours.
             </p>
             <div className="contact-line">
               <span className="svc-icon"><Icon name="mail" /></span>
@@ -356,38 +330,9 @@ function Contact() {
                 <div className="ci-value">{profile.location}</div>
               </div>
             </div>
-          </Reveal>
-
-          <Reveal>
-            <form className="form card" onSubmit={submit}>
-              <div className="field">
-                <label htmlFor="name">Name</label>
-                <input id="name" required value={form.name} onChange={update("name")} placeholder="Your name" />
-              </div>
-              <div className="field">
-                <label htmlFor="email">Email</label>
-                <input id="email" type="email" required value={form.email} onChange={update("email")} placeholder="you@company.com" />
-              </div>
-              <div className="field">
-                <label htmlFor="message">Message</label>
-                <textarea id="message" required value={form.message} onChange={update("message")} placeholder="Tell me about your project..." />
-              </div>
-              <button className="btn btn-primary" type="submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending..." : "Send message"} <Icon name="arrow" size={18} />
-              </button>
-              {status === "ok" && (
-                <div className="form-note ok">Thanks! Your message has been sent. I'll be in touch soon.</div>
-              )}
-              {status === "undelivered" && (
-                <div className="form-note err">
-                  Mail delivery isn't set up yet — your message didn't reach me. Please
-                  email me directly at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
-                </div>
-              )}
-              {status === "err" && (
-                <div className="form-note err">Something went wrong. Please email me directly instead.</div>
-              )}
-            </form>
+            <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+              Email me <Icon name="arrow" size={18} />
+            </a>
           </Reveal>
         </div>
       </div>
