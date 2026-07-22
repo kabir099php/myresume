@@ -318,7 +318,11 @@ function Contact() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error("Request failed");
-      setStatus("ok");
+      // The API returns delivered:false when SMTP isn't configured — the
+      // message was accepted but no mail was actually sent. Don't claim
+      // otherwise, or the sender assumes they've reached me.
+      const data = await res.json().catch(() => ({}));
+      setStatus(data.delivered === false ? "undelivered" : "ok");
       setForm({ name: "", email: "", message: "" });
     } catch {
       setStatus("err");
@@ -343,13 +347,6 @@ function Contact() {
               <div>
                 <div className="ci-label">Email</div>
                 <a className="ci-value" href={`mailto:${profile.email}`}>{profile.email}</a>
-              </div>
-            </div>
-            <div className="contact-line">
-              <span className="svc-icon"><Icon name="phone" /></span>
-              <div>
-                <div className="ci-label">Phone</div>
-                <div className="ci-value">{profile.phone}</div>
               </div>
             </div>
             <div className="contact-line">
@@ -380,6 +377,12 @@ function Contact() {
               </button>
               {status === "ok" && (
                 <div className="form-note ok">Thanks! Your message has been sent. I'll be in touch soon.</div>
+              )}
+              {status === "undelivered" && (
+                <div className="form-note err">
+                  Mail delivery isn't set up yet — your message didn't reach me. Please
+                  email me directly at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+                </div>
               )}
               {status === "err" && (
                 <div className="form-note err">Something went wrong. Please email me directly instead.</div>

@@ -7,10 +7,8 @@ export const profile = {
   name: "Kabir Patel",
   title: "Full Stack Developer & Team Lead",
   tagline: "Node.js · React · Next.js · NestJS · Laravel",
-  // TODO: replace placeholders with your real details before deploying.
   location: "Ahmedabad, Gujarat, India",
   email: "kabirphp099@gmail.com",
-  phone: "+91 00000 00000",
   available: true,
   resumeUrl: "/Kabir-Patel-Resume.pdf", // place a PDF in client/public to enable
   socials: [
